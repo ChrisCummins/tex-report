@@ -70,4 +70,4 @@ clean:
 	$(RM) `find . -name '*.pdf'`
 
 open:
-	$(PDF_READER) main.pdf
+	@$(PDF_READER) main.pdf &>/dev/null
