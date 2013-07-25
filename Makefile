@@ -64,7 +64,7 @@ endif
 $(WC_FILE):
 	@echo "Word count: $(WC)." > $(WC_FILE)
 
-.PHONY: clean open
+.PHONY: clean open wc
 
 clean:
 	$(RM) $(TMP_FILES)
@@ -72,3 +72,6 @@ clean:
 
 open:
 	@$(PDF_READER) main.pdf &>/dev/null
+
+wc:
+	@$(WC_SCRIPT)
