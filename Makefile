@@ -64,7 +64,7 @@ endif
 $(WC_FILE):
 	@echo "Word count: $(WC)." > $(WC_FILE)
 
-.PHONY: clean
+.PHONY: clean open
 
 clean:
 	$(RM) $(TMP_FILES)
