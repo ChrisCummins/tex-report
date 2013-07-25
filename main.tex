@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{float}
+\restylefloat{figure}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[title]{appendix}
+\usepackage[dotinlabels]{titletoc}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{mathtools}
+\usepackage[margin=0.5in]{geometry}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\newcommand*\wrapletters[1]{\wr@pletters#1\@nil}
+\def\wr@pletters#1#2\@nil{#1\allowbreak\if&#2&\else\wr@pletters#2\@nil\fi}
+
+\input{title}
+\pagenumbering{Roman}
+\begin{document}
+\maketitle
+
+\input{abstract}
+\newpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\pagenumbering{arabic}
+
+\section{INTRODUCTION \hrulefill}
+\input{intro}
+\newpage
+
+% Main body of text goes here.
+
+\section{CONCLUSIONS \hrulefill}
+\input{conclusions}
+\newpage
+
+\appendix
+\setcounter{secnumdepth}{1}
+\begin{subappendices}
+  \input{appendices}
+\end{subappendices}
+
+\newpage
+\begin{thebibliography}{9}
+  \input{ref}
+\end{thebibliography}
+
+\input{wc}
+
+\end{document}
