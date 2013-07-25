@@ -64,7 +64,7 @@ endif
 $(WC_FILE):
 	@echo "Word count: $(WC)." > $(WC_FILE)
 
-.PHONY: clean open wc
+.PHONY: clean open wc help
 
 clean:
 	$(RM) $(TMP_FILES)
@@ -75,3 +75,6 @@ open:
 
 wc:
 	@$(WC_SCRIPT)
+
+help:
+	@echo 'make <all|clean|open|wc|help>'
