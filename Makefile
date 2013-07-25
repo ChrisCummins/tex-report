@@ -50,6 +50,7 @@ all: $(SOURCES)
 ifeq ($(wildcard $(INIT_FILE)),)
 	@$(INIT_SCRIPT)
 	touch $(INIT_FILE)
+	@rm -fv README
 endif
 	$(CD) $(SOURCE_DIR) && $(TEX) main.tex
 	$(CD) $(SOURCE_DIR) && $(TEX) main.tex
